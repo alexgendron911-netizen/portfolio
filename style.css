@@ -1,1 +1,43 @@
-body { background-color: #ff0000; }
+@font-face {
+    font-family: 'Amiamie';
+    src: url('./polices/amiamie/Amiamie-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Aileron';
+    src: url('./polices/aileron/Aileron-Regular.otf') format('opentype');
+}
+
+
+
+body { 
+    background-color: #ffffff; 
+    font-family: 'Amiamie', sans-serif;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -5%;
+}
+
+.gridHeader {display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;}
+
+.navHeader {
+    grid-column: span 3 / span 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nametagHeader{
+
+    background-color: #00ffae;
+}
+
+.miscHeader{
+    grid-column-start: 5;
+    display: flex;
+    justify-content: end;
+    background-color: #ff00bf;
+}
