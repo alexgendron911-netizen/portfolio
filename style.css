@@ -1,43 +1,156 @@
-@font-face {
+@font-face{
     font-family: 'Amiamie';
-    src: url('./polices/amiamie/Amiamie-Regular.ttf') format('truetype');
+    src: url('./polices/amiamie/Amiamie-Regular.otf') format('opentype');
+    font-weight: 400;
 }
+
 
 @font-face{
     font-family: 'Aileron';
     src: url('./polices/aileron/Aileron-Regular.otf') format('opentype');
+    font-weight: 400;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
 
 body { 
-    background-color: #ffffff; 
-    font-family: 'Amiamie', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-image: url("./medias/test.png");
+    font-family: 'Aileron', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    padding: 1vh;
     letter-spacing: -5%;
+    min-height: 100vh;
+    
+    
 }
 
-.gridHeader {display: grid;
+
+
+.gridHeader {
+    
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;}
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1vw;
+    align-items: start;
+
+}
 
 .navHeader {
+
     grid-column: span 3 / span 3;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    font-family: 'Amiamie', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    
+}
+
+ a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
 }
 
 
-.nametagHeader{
 
-    background-color: #00ffae;
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 78vh;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+}
+
+.projet{
+    padding: 0.5%;
+    background-color: rgb(0, 0, 0);
+    mix-blend-mode: exclusion;
+    width: 50vw;
+    list-style: none;
+    display: none;
+    text-align: left;
+}
+
+.propos{
+    padding: 0.5%;
+    background-color: rgb(0, 0, 0);
+    mix-blend-mode: exclusion;
+    width: 50vw;
+    list-style: none;
+    display: none;
+}
+
+.projet:hover{
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+.projet p{
+    mix-blend-mode: difference;
 }
 
 .miscHeader{
     grid-column-start: 5;
     display: flex;
     justify-content: end;
-    background-color: #ff00bf;
+    text-align: right;
+    
+}
+
+
+
+
+
+.gridFooter {display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1vw;
+    height: 10vh;
+    align-items: end;
+    
+}
+
+.spacingFooter {
+    grid-column: span 3 / span 3;
+    display: flex;
+   
+}
+
+
+.nametagFooter{
+    
+    /* grid-column-start: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end; */
+}
+
+.miscFooter{
+    grid-column-start: 5;
+    display: flex;
+    justify-content: end;
+    
+}       
+
+
+ footer{
+    
+        height: 10vh;
+}
+header{
+    
+    height: 10vh;
 }
